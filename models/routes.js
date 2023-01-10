@@ -9,5 +9,5 @@ mongoose.connect('mongodb+srv://acollaguazo:acollaguazo@cluster0.gfnbh4f.mongodb
         console.log('Error in connection' + err);
     }
 });
-
+mongoose.set('strictQuery',true);
 require('./routes.model');

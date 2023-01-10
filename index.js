@@ -7,7 +7,6 @@ const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-acce
 const bodyparser = require('body-parser')
 const { engine } = require('express-handlebars');
 const routes_controller = require('./controllers/routes_controller')
-const mongoose = require('mongoose')
 
 var app = express();
 
@@ -37,5 +36,4 @@ app.set('view engine', 'hbs');
 app.listen(3000, () => {
     console.log("server started at port 3000")
 });
-mongose.set('strictQuery',true);
 app.use('/router', routes_controller);
